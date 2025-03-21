@@ -10,20 +10,11 @@
     "moduleResolution": "Bundler",
     "types": ["node"],
     "lib": ["ESNext", "Decorators"],
-    "paths": {
-      "@/*": ["src/*"]
-    },
+    "paths": { "@/*": ["src/*"] },
     "importHelpers": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "experimentalDecorators": true
-  },
-  "ts-node": {
-    "require": ["tsconfig-paths/register"],
-    "esm": true,
-    "transpileOnly": true,
-    "experimentalSpecifierResolution": "node",
-    "files": true
   },
   "exclude": ["node_modules", "dist"]
 }

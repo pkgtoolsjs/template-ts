@@ -7,7 +7,7 @@ A Node.js template with TypeScript and ES Module support.
 - ✅ ES Module support.
 - ✏️ Linter and formatter with Git hooks.
 - 📝 Watch for file changes and restart automatically.
-- 🐞 VSCode Debugger support.
+- 🐞 VS Code debugging support.
 - 📦 Build to JavaScript using Rollup.
 
 ## Environment Requirements
