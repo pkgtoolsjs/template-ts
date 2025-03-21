@@ -5,9 +5,7 @@ if (isProd) {
 } else {
   try {
     const { execa } = await import('execa')
-    const { stdout } = await execa('simple-git-hooks').pipeStdout(
-      process.stdout
-    )
+    await execa('simple-git-hooks', { stdout: process.stdout })
   } catch (error) {
     console.error(error)
   }
