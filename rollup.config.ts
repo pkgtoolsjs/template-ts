@@ -13,14 +13,14 @@ const production = process.env.BUILD === 'production'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
-const resolve = (...args: string[]) => path.resolve(__dirname, ...args)
+const getAbsolutePath = (...args: string[]) => path.resolve(__dirname, ...args)
 
 const rootDir = path.resolve(process.cwd())
-const distDir = resolve(rootDir, 'dist')
+const distDir = getAbsolutePath(rootDir, 'dist')
 
 const ts = typescript({
   check: production,
-  tsconfig: resolve(rootDir, 'tsconfig.build.json'),
+  tsconfig: getAbsolutePath(rootDir, 'tsconfig.build.json'),
   tsconfigOverride: {
     compilerOptions: {
       declarationMap: !production
