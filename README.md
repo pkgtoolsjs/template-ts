@@ -1,39 +1,44 @@
-# TypeScript with ES Module
+# template-ts
 
-A Template for Node.js using TypeScript and ES Module.
+A Node.js template with TypeScript and ES Module support.
 
 ## Features
 
-- ES Module support.
-- Linter and Formatter (git hook).
-- Observe file changes and automatically restart.
-- Rollup build to js.
+- ✅ ES Module support.
+- ✏️ Linter and formatter with Git hooks.
+- 📝 Watch for file changes and restart automatically.
+- 🐞 VSCode Debugger support.
+- 📦 Build to JavaScript using Rollup.
+
+## Environment Requirements
+
+- **Node.js**: Requires version **22.0.0** or higher. Versions lower than this are no longer supported.
 
 ## Usage
 
 ### Initialization
 
 ```bash
-# Clone template.
-npx degit hhui64/template-ts my-project
+# Use the `degit` command to clone the template repository to your local machine.
+npx degit babyw1nter/template-ts my-project
 
-# Enter project directory, and install dependencies.
+# Enter the project directory and install dependencies.
 cd my-project
-npm install # alias `npm i`
+npm i
 
-# Now, begin work.
+# Start and watch for file changes.
 npm run dev
 ```
 
-### Commands
+### Develop and build
 
-Start and automatically restart when files change:
+Start and watch for file changes:
 
 ```bash
 npm run dev
 ```
 
-Linting and Formatting code:
+Linting & Formatting:
 
 ```bash
 # lint
@@ -46,7 +51,7 @@ npm run lint:fix
 npm run format
 ```
 
-Build to js:
+Build to JavaScript:
 
 ```bash
 # build for production
@@ -56,4 +61,4 @@ npm run build
 npm run build:dev
 ```
 
-.js files will output to `dist` .
+The JavaScript files will output to `dist` .
