@@ -21,7 +21,6 @@
   "ts-node": {
     "require": ["tsconfig-paths/register"],
     "esm": true,
-    "swc": true,
     "transpileOnly": true,
     "experimentalSpecifierResolution": "node",
     "files": true
