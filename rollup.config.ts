@@ -1,6 +1,6 @@
 import path from 'node:path'
-import glob from 'glob'
-import { fileURLToPath } from 'url'
+import { globSync } from 'node:fs'
+import { fileURLToPath } from 'node:url'
 import pkg from './package.json' with { type: 'json' }
 import { defineConfig } from 'rollup'
 import commonjs from '@rollup/plugin-commonjs'
@@ -30,15 +30,13 @@ const ts = typescript({
 
 export default defineConfig({
   input: Object.fromEntries(
-    glob
-      .sync('src/**/*.ts')
-      .map((file) => [
-        path.relative(
-          'src',
-          file.slice(0, file.length - path.extname(file).length)
-        ),
-        fileURLToPath(new URL(file, import.meta.url))
-      ])
+    globSync('src/**/*.ts').map((file) => [
+      path.relative(
+        'src',
+        file.slice(0, file.length - path.extname(file).length)
+      ),
+      fileURLToPath(new URL(file, import.meta.url))
+    ])
   ),
   output: {
     format: 'es',
