@@ -4,7 +4,8 @@
     "rootDir": "src",
     "sourceMap": true,
     "declaration": true,
-    "declarationMap": true
+    "declarationMap": true,
+    "importHelpers": true
   },
   "exclude": [
     "node_modules",
