@@ -2,7 +2,7 @@ import path from 'node:path'
 import { globSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import pkg from './package.json' with { type: 'json' }
-import { defineConfig } from 'rollup'
+import type { RollupOptions } from 'rollup'
 import commonjs from '@rollup/plugin-commonjs'
 import resolve from '@rollup/plugin-node-resolve'
 import json from '@rollup/plugin-json'
@@ -29,7 +29,7 @@ const ts = () =>
     }
   })
 
-export default defineConfig({
+const config: RollupOptions = {
   input: Object.fromEntries(
     globSync('src/**/*.ts').map((file) => [
       path.relative(
@@ -48,4 +48,6 @@ export default defineConfig({
     ts(),
     del({ targets: 'dist/*' })
   ]
-})
+}
+
+export default config
