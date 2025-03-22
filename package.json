@@ -15,7 +15,7 @@
     "dev": "tsx watch ./src/index.ts --nolazy",
     "start": "node ./dist/index.js",
     "build:dev": "rollup -c --configPlugin typescript --environment BUILD:development",
-    "build": "rollup -c --configPlugin typescript --environment BUILD:production",
+    "build": "rollup -c --configPlugin typescript --configImportAttributesKey with --environment BUILD:production",
     "postinstall": "node ./scripts/postinstall.js"
   },
   "simple-git-hooks": {
