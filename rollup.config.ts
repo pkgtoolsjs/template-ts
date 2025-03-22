@@ -9,7 +9,10 @@ import json from '@rollup/plugin-json'
 import typescript from 'rollup-plugin-typescript2'
 import del from 'rollup-plugin-delete'
 
-const production = process.env.BUILD === 'production'
+const env = {
+  production: process.env.BUILD === 'production',
+  includeDeps: process.env.INCLUDE_DEPS === 'true'
+}
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -20,11 +23,11 @@ const distDir = getAbsolutePath(rootDir, 'dist')
 
 const ts = () =>
   typescript({
-    check: production,
+    check: env.production,
     tsconfig: getAbsolutePath(rootDir, 'tsconfig.build.json'),
     tsconfigOverride: {
       compilerOptions: {
-        declarationMap: !production
+        declarationMap: !env.production
       }
     }
   })
@@ -40,7 +43,7 @@ const config: RollupOptions = {
     ])
   ),
   output: { format: 'es', dir: distDir, sourcemap: 'inline' },
-  external: Object.keys(pkg.dependencies),
+  external: env.includeDeps ? [] : Object.keys(pkg.dependencies),
   plugins: [
     commonjs({ transformMixedEsModules: true }),
     resolve(),
