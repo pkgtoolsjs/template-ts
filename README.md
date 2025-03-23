@@ -14,13 +14,13 @@ Projects initialized with this template are recommended to be developed in VSCod
 
 ## Environment Requirements
 
-- **Node.js**: Requires version **22.0.0** or higher. Versions lower than this do not work.
+- **Node.js**: Requires version **22.0.0** or higher.
 
 ## Usage
 
 ### Initialization
 
-Click the **Use this template** button at the top-right and set a name for the new repository,
+Click the `Use this template` button at the top-right and set a name for the new repository,
 
 or directly clone this repository to your local machine:
 
