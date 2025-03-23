@@ -1,6 +1,8 @@
 # template-ts
 
-A Node.js template with TypeScript and ES Module support.
+A Node.js template with TypeScript and ES Module support. It is designed for quickly initializing an empty TypeScript project, with pre-configured support for ESLint for code linting, Rollup for JavaScript bundling, and VSCode debugging.
+
+Projects initialized with this template are recommended to be developed in VSCode.
 
 ## Features
 
@@ -12,11 +14,15 @@ A Node.js template with TypeScript and ES Module support.
 
 ## Environment Requirements
 
-- **Node.js**: Requires version **22.0.0** or higher. Versions lower than this are no longer supported.
+- **Node.js**: Requires version **22.0.0** or higher. Versions lower than this do not work.
 
 ## Usage
 
 ### Initialization
+
+Click the **Use this template** button at the top-right and set a name for the new repository,
+
+or directly clone this repository to your local machine:
 
 ```bash
 # Use the `degit` command to clone the template repository to your local machine.
