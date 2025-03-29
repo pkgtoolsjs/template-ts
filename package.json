@@ -30,7 +30,7 @@
       "prettier --parser=typescript --write"
     ]
   },
-  "author": "babyw1nter",
+  "author": "nice-winter",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
