@@ -12,7 +12,7 @@ export default tseslint.config(
 
   {
     name: 'app/files-to-ignore',
-    ignores: ['**/dist/**', '*.config*']
+    ignores: ['**/dist/**', 'scripts/**', '*.config*']
   },
 
   eslint.configs.recommended,
