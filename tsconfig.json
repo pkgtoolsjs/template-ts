@@ -16,5 +16,11 @@
     "resolveJsonModule": true,
     "experimentalDecorators": true
   },
+  "include": [
+    "src/**/*",
+    "eslint.config.*",
+    "rollup.config.*",
+    "prettier.config.*"
+  ],
   "exclude": ["node_modules", "dist"]
 }
