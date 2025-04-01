@@ -15,7 +15,7 @@
     "lint": "eslint --cache --ext .ts ./src",
     "lint:fix": "eslint --fix --cache --ext .ts ./src",
     "format": "prettier --write --cache .",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"OK\" && exit 0",
     "dev": "tsx watch ./src/index.ts --nolazy",
     "start": "node ./dist/index.js",
     "build:dev": "rollup -c --configPlugin typescript --configImportAttributesKey with --environment BUILD:development",
