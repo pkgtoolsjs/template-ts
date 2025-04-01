@@ -1,21 +1,33 @@
 {
+  "extends": "@tsconfig/node22/tsconfig.json",
+
   "compilerOptions": {
-    "strict": true,
-    "target": "ESNext",
-    "module": "ESNext",
-    "noEmit": true,
+    "noEmit": false,
+
     "outDir": "dist",
     "rootDir": ".",
     "baseUrl": ".",
+
+    "target": "ESNext",
+    "module": "ESNext",
     "moduleResolution": "Bundler",
-    "types": ["node"],
+
     "lib": ["ESNext", "Decorators"],
-    "paths": { "@/*": ["src/*"] },
-    "importHelpers": true,
-    "esModuleInterop": true,
+
     "resolveJsonModule": true,
-    "experimentalDecorators": true
+
+    "forceConsistentCasingInFileNames": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+
+    "preserveWatchOutput": true,
+
+    "importHelpers": true,
+
+    "paths": { "@/*": ["src/*"] }
   },
+
   "include": [
     "src/**/*",
     "eslint.config.*",

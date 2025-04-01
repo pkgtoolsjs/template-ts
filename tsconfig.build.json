@@ -4,14 +4,13 @@
     "rootDir": "src",
     "sourceMap": true,
     "declaration": true,
-    "declarationMap": true,
-    "importHelpers": true
+    "declarationMap": true
   },
   "include": ["src/**/*"],
   "exclude": [
     "node_modules",
     "dist",
-    "**/rollup.config.ts",
+    "rollup.config.*",
     "**/__tests__",
     "**/*.test.ts",
     "**/vitest.config.ts",
