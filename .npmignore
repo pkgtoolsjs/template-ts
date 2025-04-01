@@ -18,3 +18,4 @@ vitest.config.*
 .editorconfig
 .prettierignore
 .gitattributes
+.rollup*

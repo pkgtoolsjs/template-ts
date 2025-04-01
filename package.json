@@ -1,5 +1,6 @@
 {
-  "name": "template-ts",
+  "name": "@nice-winter/template-ts",
+  "description": "A Node.js template with TypeScript and ES Module support.",
   "version": "1.0.0",
   "private": true,
   "type": "module",
