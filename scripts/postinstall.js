@@ -1,4 +1,4 @@
-const isProd = !process.env.INIT_CWD === process.cwd()
+const isProd = !(process.env.INIT_CWD === process.cwd())
 
 if (isProd) {
   process.exit()
