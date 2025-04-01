@@ -18,7 +18,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsx watch ./src/index.ts --nolazy",
     "start": "node ./dist/index.js",
-    "build:dev": "rollup -c --configPlugin typescript --environment BUILD:development",
+    "build:dev": "rollup -c --configPlugin typescript --configImportAttributesKey with --environment BUILD:development",
     "build": "rollup -c --configPlugin typescript --configImportAttributesKey with --environment BUILD:production",
     "postinstall": "node ./scripts/postinstall.js"
   },
