@@ -1,4 +1,4 @@
-name: Add GitHub Release Tag
+name: Publish Release
 
 on:
   push:
@@ -9,16 +9,13 @@ on:
 
 jobs:
   release:
-    if: github.repository == 'nice-winter/template-ts'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Create Release for Tag
-        id: release_tag
-        uses: yyx990803/release-tag@master
+        uses: elgohr/Github-Release-Action@v5
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.ref }}
-          body: |
-            Please refer to [CHANGELOG.md](https://github.com/nice-winter/template-ts/blob/${{ github.ref_name }}/CHANGELOG.md) for details.
+          tag: ${{ github.ref }}
+          title: ${{ github.ref_name }}
