@@ -36,6 +36,9 @@
     ]
   },
   "author": "nice-winter",
+  "repository": {
+    "url": "git+https://github.com/nice-winter/template-ts.git"
+  },
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
