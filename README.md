@@ -7,10 +7,11 @@ Projects initialized with this template are recommended to be developed in VSCod
 ## Features
 
 - ✅ ES Module support.
-- ✏️ Linter and formatter with Git hooks.
-- 📝 Watch for file changes and restart automatically.
+- 🩹 Linting and formatting with Git hooks.
+- 📝 Automatically watches for file changes and restarts.
 - 🐞 VS Code debugging support.
-- 📦 Build to JavaScript using Rollup.
+- 📦 Bundles JavaScript using Rollup.
+- 🚀 CI/CD integration.
 
 ## Environment Requirements
 
@@ -26,7 +27,7 @@ or directly clone this repository to your local machine:
 
 ```bash
 # Use the `degit` command to clone the template repository to your local machine.
-npx degit babyw1nter/template-ts my-project
+npx degit nice-winter/template-ts my-project
 
 # Enter the project directory and install dependencies.
 cd my-project
@@ -68,3 +69,37 @@ npm run build:dev
 ```
 
 The JavaScript files will output to `dist` .
+
+### CI/CD
+
+You need to add your `NPM_TOKEN` to the secrets in the repository settings.
+
+Set `private: true` to `false` in `package.json`:
+
+```diff
+{
+  "name": "@nice-winter/template-ts",
+  "description": "...",
+  "version": "1.0.0",
+-  "private": true,
++  "private": false,
+  // ...Other keys...
+}
+```
+
+And configure the appropriate `repository.url`:
+
+```diff
+{
+  "author": "...",
+  "repository": {
+-   "url": "git+https://github.com/nice-winter/template-ts.git"
++   "url": "git+https://github.com/yourname/your-repository.git"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  // ...Other keys...
+}
+```
+
+Only then will the "Publish package" workflow be triggered. Otherwise, it will not be published to NPM.
