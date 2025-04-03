@@ -1,6 +1,8 @@
+import isCI from 'is-ci'
+
 const isProd = !(process.env.INIT_CWD === process.cwd())
 
-if (isProd) {
+if (isProd || isCI) {
   process.exit()
 } else {
   try {

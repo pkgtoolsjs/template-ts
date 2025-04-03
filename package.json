@@ -40,7 +40,9 @@
     "url": "git+https://github.com/nice-winter/template-ts.git"
   },
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "is-ci": "^4.1.0"
+  },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.3",
     "@rollup/plugin-json": "^6.1.0",
