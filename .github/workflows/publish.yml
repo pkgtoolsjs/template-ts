@@ -11,22 +11,25 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [22]
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Set node version to 22
+      - name: Setup Node.js ${{ matrix.node }}
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: ${{ matrix.node }}
+          cache: 'npm'
 
-      - name: Install deps
+      - name: Install dependencies
         run: npm ci
 
-      - name: Test
+      - name: Run test
         run: npm test
 
-      - name: Build
+      - name: Run build
         run: npm run build
 
       - name: Dry run publish
@@ -42,14 +45,16 @@ jobs:
   publish:
     env:
       CHECK_NPM_TOKEN: ${{ secrets.NPM_TOKEN != '' }}
+    strategy:
+      matrix:
+        node: [22]
     needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
       id-token: write
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Download artifact
         uses: actions/download-artifact@v4
@@ -59,7 +64,7 @@ jobs:
       - name: Set npm registry url
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: ${{ matrix.node }}
           registry-url: 'https://registry.npmjs.org'
 
       - name: Dry run publish
