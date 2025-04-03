@@ -83,11 +83,11 @@ This template comes with the following pre-configured workflows:
 - **publish**: Triggered when a tag is pushed with the format `v*`.
   It runs unit tests and builds the project before publishing it to NPM.
 
-However, you need to adjust the following configurations for publish to work properly.
+**However, you need to adjust the following configurations for publish to work properly.**
 
-You need to add your `NPM_TOKEN` to the secrets in the repository settings.
+1.You need to add your `NPM_TOKEN` to the secrets in the repository settings.
 
-To publish your package, you must change `private` from true to `false` in package.json:
+2.To prevent accidental publishing, the template project's package.json has private set to true by default. To publish your package, you must change `private` from true to `false` in package.json:
 
 ```diff
 {
@@ -100,9 +100,9 @@ To publish your package, you must change `private` from true to `false` in packa
 }
 ```
 
-⚠️ **Note:** The publish workflow enables [Generating provenance statements](https://docs.npmjs.com/generating-provenance-statements) by default when publishing to NPM. You need to update the `repository.url` field in package.json to your own repository URL, otherwise, it will cause an error.
+3.Update the `repository.url` field in package.json to **your repository URL**:
 
-Update the `repository.url` field in package.json to **your repository URL**:
+⚠️ **Note:** The publish workflow enables [Generating provenance statements](https://docs.npmjs.com/generating-provenance-statements) by default when publishing to NPM. You need to update the `repository.url` field in package.json to your own repository URL, otherwise, it will cause an error.
 
 ```diff
 {
@@ -118,3 +118,7 @@ Update the `repository.url` field in package.json to **your repository URL**:
 ```
 
 Only then will the "Publish package" workflow be triggered. Otherwise, it will not be published to NPM.
+
+## License
+
+[MIT License](LICENSE)
