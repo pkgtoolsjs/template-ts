@@ -72,9 +72,22 @@ The JavaScript files will output to `dist` .
 
 ### CI/CD
 
+This template comes with the following pre-configured workflows:
+
+- **ci**: Triggered on any push or when a PR is opened to the `main` branch.
+  It runs a series of unit tests and builds the project.
+
+- **release**: Triggered when a tag is pushed with the format `v*`.
+  It automatically creates a release in the repository and applies the corresponding tag.
+
+- **publish**: Triggered when a tag is pushed with the format `v*`.
+  It runs unit tests and builds the project before publishing it to NPM.
+
+However, you need to adjust the following configurations for publish to work properly.
+
 You need to add your `NPM_TOKEN` to the secrets in the repository settings.
 
-Set `private: true` to `false` in `package.json`:
+Set `private: true` to `false` in package.json:
 
 ```diff
 {
@@ -87,7 +100,9 @@ Set `private: true` to `false` in `package.json`:
 }
 ```
 
-And configure the appropriate `repository.url`:
+⚠️ **Note:** The publish workflow enables [Generating provenance statements](https://docs.npmjs.com/generating-provenance-statements) by default when publishing to NPM. You need to update the `repository.url` field in package.json to your own repository URL, otherwise, it will cause an error.
+
+Update the `repository.url` field in package.json to **your repository URL**:
 
 ```diff
 {
