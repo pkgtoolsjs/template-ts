@@ -87,7 +87,7 @@ However, you need to adjust the following configurations for publish to work pro
 
 You need to add your `NPM_TOKEN` to the secrets in the repository settings.
 
-Set `private: true` to `false` in package.json:
+To publish your package, you must change `private` from true to `false` in package.json:
 
 ```diff
 {
