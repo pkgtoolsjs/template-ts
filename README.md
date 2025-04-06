@@ -51,14 +51,11 @@ Linting & Formatting:
 # lint
 npm run lint
 
-# lint and fix
-npm run lint:fix
-
 # format
 npm run format
 ```
 
-Build to JavaScript:
+Bundling to JavaScript:
 
 ```bash
 # build for production
