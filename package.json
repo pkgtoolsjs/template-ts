@@ -41,6 +41,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@dotenvx/dotenvx": "^1.39.1",
     "is-ci": "^4.1.0"
   },
   "devDependencies": {
