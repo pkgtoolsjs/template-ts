@@ -13,12 +13,11 @@
     "import": "./dist/index.js"
   },
   "scripts": {
-    "lint": "eslint --cache --ext .ts ./src",
-    "lint:fix": "eslint --fix --cache --ext .ts ./src",
-    "format": "prettier --write --cache .",
+    "lint": "eslint --fix --ext .ts ./src",
+    "format": "prettier --write .",
     "test": "echo \"OK\" && exit 0",
-    "dev": "tsx watch ./src/index.ts --nolazy",
-    "start": "node ./dist/index.js",
+    "dev": "dotenvx run -- tsx watch ./src/index.ts --nolazy",
+    "start": "dotenvx run -- node ./dist/index.js",
     "build:dev": "rollup -c --configPlugin typescript --configImportAttributesKey with --environment BUILD:development",
     "build": "rollup -c --configPlugin typescript --configImportAttributesKey with --environment BUILD:production",
     "postinstall": "node ./scripts/postinstall.js"
