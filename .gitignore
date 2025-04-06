@@ -17,3 +17,8 @@ pnpm-debug.log*
 
 # Cache files
 .eslintcache
+
+.env*
+.flaskenv*
+!.env.project
+!.env.vault

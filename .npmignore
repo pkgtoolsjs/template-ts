@@ -19,3 +19,8 @@ vitest.config.*
 .prettierignore
 .gitattributes
 .rollup*
+
+.env*
+.flaskenv*
+!.env.project
+!.env.vault
