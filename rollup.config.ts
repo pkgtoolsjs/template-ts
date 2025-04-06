@@ -10,7 +10,7 @@ import typescript from 'rollup-plugin-typescript2'
 import del from 'rollup-plugin-delete'
 
 const env = {
-  production: process.env.BUILD === 'production',
+  production: process.env.BUILD?.startsWith('prod'),
   includeDeps: process.env.INCLUDE_DEPS === 'true'
 }
 
