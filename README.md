@@ -2,6 +2,8 @@
 
 A Node.js template with TypeScript and ES Module support. It is designed for quickly initializing an empty TypeScript project, with pre-configured support for ESLint for code linting, Rollup for JavaScript bundling, and VSCode debugging.
 
+It also comes with pre-configured CI/CD workflows based on GitHub Actions, making it suitable for rapid library development or quick prototyping, without the need to set everything up from scratch.
+
 Projects initialized with this template are recommended to be developed in VSCode.
 
 ## Features
