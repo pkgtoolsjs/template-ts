@@ -19,7 +19,7 @@
     "dev": "dotenvx run -- tsx watch ./src/index.ts --nolazy",
     "start": "dotenvx run -- node ./dist/index.js",
     "build": "dotenvx run -- tsup",
-    "postinstall": "node ./scripts/postinstall.js"
+    "postinstall": "dotenvx run -- node ./scripts/postinstall.js"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
