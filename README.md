@@ -62,9 +62,6 @@ Bundling to JavaScript:
 ```bash
 # build for production
 npm run build
-
-# build for developement
-npm run build:dev
 ```
 
 The JavaScript files will output to `dist` .
