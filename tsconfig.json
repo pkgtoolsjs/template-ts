@@ -10,7 +10,7 @@
 
     "target": "ESNext",
     "module": "ESNext",
-    "moduleResolution": "Bundler",
+    "moduleResolution": "bundler",
 
     "lib": ["ESNext", "Decorators"],
 
