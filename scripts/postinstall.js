@@ -1,13 +1,14 @@
-import isCI from 'is-ci'
+const isProd = process.env.NODE_ENV === 'production'
 
-const isProd = !(process.env.INIT_CWD === process.cwd())
-
-if (isProd || isCI) {
-  process.exit()
-}
+if (isProd) process.exit()
 
 try {
+  const isCI = (await import('is-ci')).default
+
+  if (isCI) process.exit()
+
   const { execa } = await import('execa')
+
   await execa('simple-git-hooks', { stdout: process.stdout })
 } catch (error) {
   console.error(error)
