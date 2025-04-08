@@ -1,22 +1,11 @@
 import { globSync } from 'node:fs'
-import path from 'node:path'
-import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'tsup'
+import { fixImportsPlugin } from 'esbuild-fix-imports-plugin'
 
-const entry = Object.fromEntries(
-  globSync('src/**/*.ts').map((file) => [
-    path.relative(
-      'src',
-      file.slice(0, file.length - path.extname(file).length)
-    ),
-    fileURLToPath(new URL(file, import.meta.url))
-  ])
-)
-
-console.log(entry)
+const entry = globSync('src/**/*.ts')
 
 export default defineConfig({
-  tsconfig: './tsconfig.build.json',
+  tsconfig: 'tsconfig.build.json',
   entry,
   target: 'node22',
   platform: 'node',
@@ -25,5 +14,7 @@ export default defineConfig({
   bundle: false,
   splitting: false,
   sourcemap: false,
-  clean: true
+  clean: true,
+
+  esbuildPlugins: [fixImportsPlugin()]
 })
