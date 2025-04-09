@@ -28,11 +28,6 @@
     "paths": { "@/*": ["src/*"] }
   },
 
-  "include": [
-    "src/**/*",
-    "eslint.config.*",
-    "rollup.config.*",
-    "prettier.config.*"
-  ],
+  "include": ["src/**/*", "prettier.config.*"],
   "exclude": ["node_modules", "dist"]
 }
