@@ -13,7 +13,7 @@
     "import": "./dist/index.js"
   },
   "scripts": {
-    "lint": "",
+    "lint": "oxlint .",
     "format": "prettier --write .",
     "test": "echo \"OK\" && exit 0",
     "dev": "dotenvx run -- tsx watch ./src/index.ts --nolazy",
@@ -29,6 +29,7 @@
       "prettier --write"
     ],
     "*.ts?(x)": [
+      "oxlint",
       "prettier --parser=typescript --write"
     ]
   },
