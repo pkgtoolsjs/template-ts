@@ -7,7 +7,7 @@ const entry = globSync('src/**/*.ts')
 export default defineConfig({
   tsconfig: 'tsconfig.build.json',
   entry,
-  target: 'node22',
+  target: 'node16',
   platform: 'node',
   format: ['esm'],
   dts: true,
