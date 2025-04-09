@@ -15,9 +15,6 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Cache files
-.eslintcache
-
 .env*
 .flaskenv*
 !.env.project
