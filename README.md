@@ -1,6 +1,6 @@
 # template-ts [![CI](https://github.com/nice-winter/template-ts/actions/workflows/ci.yml/badge.svg)](https://github.com/nice-winter/template-ts/actions/workflows/ci.yml)
 
-A Node.js template with TypeScript and ES Module support. It is designed for quickly initializing an empty TypeScript project, with pre-configured support for OXLint for code linting, tsup for JavaScript bundling, and VSCode debugging.
+A Node.js template with TypeScript and ES Module support. It is designed for quickly initializing an empty TypeScript project, with pre-configured support for OxLint for code linting, tsup for JavaScript bundling, and VSCode debugging.
 
 It also comes with pre-configured CI/CD workflows based on GitHub Actions, making it suitable for rapid library development or quick prototyping, without the need to set everything up from scratch.
 
