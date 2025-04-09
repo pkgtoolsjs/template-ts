@@ -19,7 +19,7 @@ vitest.config.*
 .prettierignore
 .gitattributes
 .rollup*
-
+.ox*
 .env*
 .flaskenv*
 !.env.project
