@@ -1,18 +1,9 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
   "plugins": ["typescript", "oxc"],
-  "env": {
-    "builtin": true
-  },
   "ignorePatterns": ["node_modules", "**/dist/**", "scripts/**", "*.config*"],
-  "overrides": [
-    {
-      "files": ["**/*.{ts,tsx,mts,cts}"],
-      "plugins": ["typescript"],
-      "rules": {
-        "no-unused-vars": "warn",
-        "no-async-promise-executor": "off"
-      }
-    }
-  ]
+  "rules": {
+    "no-unused-vars": "warn",
+    "no-async-promise-executor": "off"
+  }
 }
