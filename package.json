@@ -16,10 +16,12 @@
     "lint": "oxlint .",
     "format": "prettier --write .",
     "test": "echo \"OK\" && exit 0",
-    "dev": "dotenvx run -- tsx watch ./src/index.ts --nolazy",
-    "start": "dotenvx run -- node ./dist/index.js",
-    "build": "dotenvx run -- tsup",
-    "postinstall": "dotenvx run -- node ./scripts/postinstall.js"
+    "dev": "tsx watch ./src/index.ts --nolazy --env-file=.env",
+    "start": "node --env-file=.env ./dist/index.js",
+    "type-check": "tsc --noEmit",
+    "build": "run-p type-check build-only",
+    "build-only": "tsup",
+    "postinstall": "node ./scripts/postinstall.js"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
@@ -48,6 +50,7 @@
     "execa": "^9.5.2",
     "is-ci": "^4.1.0",
     "lint-staged": "^15.5.0",
+    "npm-run-all2": "^7.0.2",
     "oxlint": "^0.16.5",
     "prettier": "^3.5.3",
     "simple-git-hooks": "^2.12.1",
