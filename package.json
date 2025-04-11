@@ -17,7 +17,7 @@
     "lint": "oxlint --fix .",
     "format": "prettier --write .",
     "test": "echo \"OK\" && exit 0",
-    "dev": "tsx watch ./src/index.ts --nolazy --env-file=.env",
+    "dev": "tsx --env-file=.env watch ./src/index.ts --nolazy",
     "start": "node --env-file=.env ./dist/index.js",
     "type-check": "tsc --noEmit",
     "build": "run-p type-check \"build-only {@}\" --",
