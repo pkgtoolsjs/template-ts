@@ -13,21 +13,21 @@
     "import": "./dist/index.js"
   },
   "scripts": {
-    "lint": "oxlint .",
+    "postinstall": "node ./scripts/postinstall.js",
+    "lint": "oxlint --fix .",
     "format": "prettier --write .",
     "test": "echo \"OK\" && exit 0",
     "dev": "tsx watch ./src/index.ts --nolazy --env-file=.env",
     "start": "node --env-file=.env ./dist/index.js",
     "type-check": "tsc --noEmit",
-    "build": "run-p type-check build-only",
-    "build-only": "tsup",
-    "postinstall": "node ./scripts/postinstall.js"
+    "build": "run-p type-check \"build-only {@}\" --",
+    "build-only": "tsup"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
   },
   "lint-staged": {
-    "*.{js?(x),json}": [
+    "*.{js?(x),json,md}": [
       "prettier --write"
     ],
     "*.ts?(x)": [
