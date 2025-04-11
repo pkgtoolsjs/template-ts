@@ -10,7 +10,7 @@
   "main": "dist/index.js",
   "module": "dist/index.js",
   "exports": {
-    "import": "./dist/index.js"
+    ".": "./dist/index.js"
   },
   "scripts": {
     "postinstall": "node ./scripts/postinstall.js",
