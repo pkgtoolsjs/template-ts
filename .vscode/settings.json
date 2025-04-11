@@ -26,5 +26,6 @@
   },
 
   "prettier.requireConfig": true,
+
   "oxc.enable": true
 }
