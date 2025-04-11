@@ -40,9 +40,6 @@
     "url": "git+https://github.com/nice-winter/template-ts.git"
   },
   "license": "MIT",
-  "dependencies": {
-    "@dotenvx/dotenvx": "^1.39.1"
-  },
   "devDependencies": {
     "@tsconfig/node22": "^22.0.1",
     "@types/node": "^22.14.0",
