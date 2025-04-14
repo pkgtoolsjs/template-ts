@@ -42,11 +42,11 @@
   "license": "MIT",
   "devDependencies": {
     "@tsconfig/node22": "^22.0.1",
-    "@types/node": "^22.14.0",
+    "@types/node": "^22.14.1",
     "esbuild-fix-imports-plugin": "^1.0.19",
     "execa": "^9.5.2",
     "is-ci": "^4.1.0",
-    "lint-staged": "^15.5.0",
+    "lint-staged": "^15.5.1",
     "npm-run-all2": "^7.0.2",
     "oxlint": "^0.16.5",
     "prettier": "^3.5.3",
