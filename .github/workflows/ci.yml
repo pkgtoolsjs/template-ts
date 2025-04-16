@@ -14,8 +14,6 @@ permissions:
 jobs:
   unit-test:
     runs-on: ubuntu-latest
-    env:
-      PUPPETEER_SKIP_DOWNLOAD: 'true'
     strategy:
       matrix:
         node: [22]
