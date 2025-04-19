@@ -11,16 +11,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node: [22]
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Node.js ${{ matrix.node }}
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node }}
+          node-version-file: '.node-version'
 
       - name: Install dependencies
         run: |
@@ -51,9 +48,6 @@ jobs:
   publish:
     env:
       CHECK_NPM_TOKEN: ${{ secrets.NPM_TOKEN != '' }}
-    strategy:
-      matrix:
-        node: [22]
     needs: build
     runs-on: ubuntu-latest
     permissions:
@@ -70,7 +64,7 @@ jobs:
       - name: Set npm registry url
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node }}
+          node-version-file: '.node-version'
           registry-url: 'https://registry.npmjs.org'
 
       - name: Dry run publish
@@ -81,3 +75,8 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npm publish . --provenance --access public
+
+      - name: Clean up
+        uses: geekyeggo/delete-artifact@v5
+        with:
+          name: dist
