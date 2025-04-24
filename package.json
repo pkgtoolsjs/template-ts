@@ -13,7 +13,7 @@
     ".": "./dist/index.js"
   },
   "scripts": {
-    "postinstall": "node ./scripts/postinstall.js",
+    "postinstall": "node -e \"try{require('./scripts/postinstall.js')}catch(e){}\"",
     "lint": "oxlint --fix .",
     "format": "prettier --write .",
     "test": "echo \"OK\" && exit 0",

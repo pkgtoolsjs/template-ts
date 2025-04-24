@@ -1,15 +1,11 @@
+import { $ } from 'execa'
+import isCI from 'is-ci'
+import { existsSync } from 'node:fs'
+
 const isProd = process.env.NODE_ENV === 'production'
 
-if (isProd) process.exit()
+if (isProd || isCI) process.exit()
 
-try {
-  const isCI = (await import('is-ci')).default
-
-  if (isCI) process.exit()
-
-  const { execa } = await import('execa')
-
-  await execa('simple-git-hooks', { stdout: process.stdout })
-} catch (error) {
-  console.error(error)
+if (existsSync('.git')) {
+  await $({ stdout: process.stdout })`simple-git-hooks`
 }
