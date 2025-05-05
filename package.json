@@ -42,18 +42,18 @@
   "license": "MIT",
   "devDependencies": {
     "@tsconfig/node22": "^22.0.1",
-    "@types/node": "^22.15.2",
-    "esbuild-fix-imports-plugin": "^1.0.19",
+    "@types/node": "^22.15.3",
+    "esbuild-fix-imports-plugin": "^1.0.20",
     "execa": "^9.5.2",
     "is-ci": "^4.1.0",
     "lint-staged": "^15.5.1",
-    "npm-run-all2": "^7.0.2",
-    "oxlint": "^0.16.8",
+    "npm-run-all2": "^8.0.1",
+    "oxlint": "^0.16.9",
     "prettier": "^3.5.3",
     "simple-git-hooks": "^2.13.0",
     "tslib": "^2.8.1",
     "tsup": "^8.4.0",
-    "tsx": "^4.19.3",
+    "tsx": "^4.19.4",
     "typescript": "~5.8.3"
   }
 }
