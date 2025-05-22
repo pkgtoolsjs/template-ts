@@ -9,6 +9,7 @@
   },
   "main": "dist/index.js",
   "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": "./dist/index.js"
   },
@@ -21,7 +22,7 @@
     "start": "node --env-file=.env ./dist/index.js",
     "type-check": "tsc --noEmit",
     "build": "run-p type-check \"build-only {@}\" --",
-    "build-only": "tsup"
+    "build-only": "tsdown"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
@@ -43,7 +44,6 @@
   "devDependencies": {
     "@tsconfig/node22": "^22.0.2",
     "@types/node": "^22.15.21",
-    "esbuild-fix-imports-plugin": "^1.0.20",
     "execa": "^9.5.3",
     "is-ci": "^4.1.0",
     "lint-staged": "^16.0.0",
@@ -51,8 +51,8 @@
     "oxlint": "^0.16.11",
     "prettier": "^3.5.3",
     "simple-git-hooks": "^2.13.0",
+    "tsdown": "^0.12.2",
     "tslib": "^2.8.1",
-    "tsup": "^8.5.0",
     "tsx": "^4.19.4",
     "typescript": "~5.8.3"
   }
