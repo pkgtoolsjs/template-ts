@@ -1,7 +1,7 @@
 {
-  "name": "@nice-winter/template-ts",
+  "name": "@pkgtoolsjs/template-ts",
   "description": "A Node.js template with TypeScript and ES Module support.",
-  "version": "1.0.1",
+  "version": "0.0.0",
   "private": true,
   "type": "module",
   "engines": {
@@ -38,7 +38,7 @@
   },
   "author": "nice-winter",
   "repository": {
-    "url": "git+https://github.com/nice-winter/template-ts.git"
+    "url": "git+https://github.com/pkgtoolsjs/template-ts.git"
   },
   "license": "MIT",
   "devDependencies": {
