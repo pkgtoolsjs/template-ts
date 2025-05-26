@@ -1,4 +1,4 @@
-# template-ts [![CI](https://github.com/nice-winter/template-ts/actions/workflows/ci.yml/badge.svg)](https://github.com/nice-winter/template-ts/actions/workflows/ci.yml)
+# template-ts [![CI](https://github.com/pkgtoolsjs/template-ts/actions/workflows/ci.yml/badge.svg)](https://github.com/pkgtoolsjs/template-ts/actions/workflows/ci.yml)
 
 A Node.js template with TypeScript and ES Module support. It is designed for quickly initializing an empty TypeScript project, with pre-configured support for [oxlint](https://oxc.rs/docs/guide/usage/linter.html) for code linting, [tsdown](https://tsdown.dev/) for JavaScript bundling, and VSCode debugging.
 
@@ -29,7 +29,7 @@ or directly clone this repository to your local machine:
 
 ```bash
 # Use the `degit` command to clone the template repository to your local machine.
-npx degit nice-winter/template-ts my-project
+npx degit pkgtoolsjs/template-ts my-project
 
 # Enter the project directory and install dependencies.
 cd my-project
@@ -87,7 +87,7 @@ This template comes with the following pre-configured workflows:
 
 ```diff
 {
-  "name": "@nice-winter/template-ts",
+  "name": "@pkgtoolsjs/template-ts",
   "description": "...",
   "version": "1.0.0",
 -  "private": true,
@@ -104,7 +104,7 @@ This template comes with the following pre-configured workflows:
 {
   "author": "...",
   "repository": {
--   "url": "git+https://github.com/nice-winter/template-ts.git"
+-   "url": "git+https://github.com/pkgtoolsjs/template-ts.git"
 +   "url": "git+https://github.com/yourname/your-repository.git"
   },
   "license": "MIT",
