@@ -20,14 +20,7 @@ jobs:
           node-version-file: '.node-version'
 
       - name: Install dependencies
-        run: |
-          if [ -f package-lock.json ]; then
-            echo "package-lock.json found, using 'npm ci'"
-            npm ci
-          else
-            echo "package-lock.json not found, using 'npm install'"
-            npm install
-          fi
+        run: npm ci
 
       - name: Run test
         run: npm test
