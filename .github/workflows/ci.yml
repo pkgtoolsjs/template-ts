@@ -16,16 +16,13 @@ permissions:
 jobs:
   test-and-build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node: [24]
     steps:
       - uses: actions/checkout@v5
 
-      - name: Setup Node.js ${{ matrix.node }}
+      - name: Setup Node.js
         uses: actions/setup-node@v5
         with:
-          node-version: ${{ matrix.node }}
+          node-version-file: '.node-version'
 
       - name: Install dependencies
         run: |
