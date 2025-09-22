@@ -20,7 +20,7 @@
 
     "importHelpers": true,
 
-    "paths": { "@/*": ["src/*"] }
+    "paths": { "@/*": ["./src/*"] }
   },
 
   "include": ["src/**/*.ts"],
