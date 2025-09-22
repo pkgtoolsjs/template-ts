@@ -1,5 +1,5 @@
 {
-  "extends": ["./tsconfig.node.json"],
+  "extends": ["./tsconfig.json"],
 
   "compilerOptions": {
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.build.tsbuildinfo",
@@ -9,8 +9,9 @@
 
     "sourceMap": true,
     "declaration": true,
-    "declarationMap": false,
-    "isolatedDeclarations": true
+    "declarationMap": false
+
+    // "isolatedDeclarations": true
   },
 
   "include": ["src/**/*.ts"],
