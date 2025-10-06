@@ -2,6 +2,7 @@
   "recommendations": [
     "EditorConfig.EditorConfig",
     "esbenp.prettier-vscode",
-    "oxc.oxc-vscode"
+    "oxc.oxc-vscode",
+    "vitest.explorer"
   ]
 }
